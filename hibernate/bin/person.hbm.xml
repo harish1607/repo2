@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+          "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+          "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>
+<class name="com.java.Person" table="person">
+<id name="personid"></id>
+<property name="firstname"/>
+<property name="lastname"/>
+<one-to-one name="address" class="com.java.Address" cascade="all"/>
+</class>
+</hibernate-mapping>
